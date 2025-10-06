@@ -14,6 +14,8 @@ export const router = createBrowserRouter([
         {
             index: true,
             path: "/",
+            loader: ()=> fetch("https://raw.githubusercontent.com/ProgrammingHero1/boi-poka-Book-Vibe-Resources/refs/heads/main/data/booksData.json").then(res => res.json()),
+            // loader: ()=> fetch("booksData.json"),
             Component: Home,
         }
     ]
